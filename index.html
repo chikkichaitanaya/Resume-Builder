@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+<body>
+
+    <div class="container">
+        <h1>Resume Builder</h1>
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <form id="resume-form">
+                <h2>Personal Information</h2>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+                <label for="address">Address</label>
+                <textarea id="address" placeholder="Enter your address" rows="2"></textarea>
+
+                <h2>Education</h2>
+                <label for="education">Education</label>
+                <textarea id="education" placeholder="Enter your educational background" rows="3"></textarea>
+
+                <h2>Work Experience</h2>
+                <label for="experience">Work Experience</label>
+                <textarea id="experience" placeholder="Enter your work experience" rows="3"></textarea>
+
+                <h2>Skills</h2>
+                <label for="skills">Skills</label>
+                <textarea id="skills" placeholder="Enter your skills" rows="2"></textarea>
+
+                <button type="button" onclick="generateResume()">Generate Resume</button>
+                <button type="button" onclick="exportPDF()">Export to PDF</button>
+
+            </form>
+        </div>
+
+        <!-- Resume Preview Section -->
+        <div class="resume-section">
+            <h2>Your Resume</h2>
+            <div id="resume-preview">
+                <div id="preview-name"></div>
+                <div id="preview-email"></div>
+                <div id="preview-phone"></div>
+                <div id="preview-address"></div>
+
+                <h3>Education</h3>
+                <div id="preview-education"></div>
+
+                <h3>Work Experience</h3>
+                <div id="preview-experience"></div>
+
+                <h3>Skills</h3>
+                <div id="preview-skills"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
